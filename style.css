@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 14px;
+    line-height: 2em;
+    text-align: center;
+}
+
+/*Header*/
+.header{
+    width: 100%;
+    display: flex;
+}
+
+.navbar{
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.menu li:last-child{
+    margin-right: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu a:hover{
+    background-color:#fff;
+    color: #060061;
+
+}
+
+@media (max-width: 768px) {
+    .menu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+      margin: 0;
+    }
+  
+    .menu li {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .menu a {
+      display: block;
+      padding: 10px;
+      border-radius: 0;
+    }
+  
+    .menu-button {
+      display: block;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 10px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  
+    .menu-button:focus {
+      outline: none;
+    }
+  }
+  
+/* Header end*/
+
+/*main*/
+.container {
+  padding: 2rem;
+  color: aliceblue;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.main{
+  background-color: #060061;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.main-container {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-color: #060061;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-container h1{
+  padding: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 2em;
+  position: relative;
+  animation-name: titleconvert;
+  animation-duration: 2s;
+
+}
+@keyframes titleconvert {
+  from{
+    opacity: 0;
+    font-size: 0.5em;
+  }
+
+  to{
+    opacity: 100%;
+    font-size: 2em;
+  }
+  
+}
+
+.main-container p{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  padding-top: 20px;
+  position: relative;
+  animation: slide 2s ease-in;
+}
+
+@keyframes slide {
+  from{
+    opacity: 0;
+    font-size: 0.5em;
+  }
+
+  to{
+    opacity: 100%;
+    font-size: 1em;
+  }
+}
+
+/*Main-end*/
+
+
+/* Feature */
+
+#features-section{
+  padding: 50px;
+  position:flex ;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  background-color:#97a2eb ;
+  background-image: url('image1.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#features-section h1{
+  font-size: 2em;
+}
+
+#features-section div.features div.feature{
+  width: 450px;
+  margin: 10px;
+  background-color: #97a2eb;
+  animation: spawn 1s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes spawn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+
+.features{
+  padding-top: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+#features-section div.features div.feature:hover{
+  color: black;
+  background-color: #827FB0;
+  opacity: 0.4;
+}
+
+/* Feature end*/
+
+
+/*About*/
+.about-container {
+  padding: 50px;
+  text-decoration: none;
+  background-color: #827FB0;
+  color: #fff;
+}
+
+
+.about-container h1{
+  color: black;
+  opacity: 0.7;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+}
+
+.about-container h2{
+  color: black;
+  opacity: 0.65;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.about-container h3{
+  color: black;
+  opacity: 0.6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.7em;
+}
+
+.about-container p{
+  opacity: 0.7;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-size: 1.3em;
+}
+
+.about-container h2 a.mc-link{
+  color: rgb(24, 0, 162);
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 1em;
+
+}
+.about-container h2 a.mc-link:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+
+}
+
+.about-container h2 a.mc-link ::after{
+  color: rgb(141, 11, 11);
+}
+
+/* About end*/
+
+/*Footer*/
+
+footer {
+  color: #fff;
+  padding: 50px 0;
+  font-size: 14px;
+}
+
+footer h3 {
+  color: #fff;
+  font-size: 18px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul li i {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  footer .col-md-4 {
+    margin-bottom: 30px;
+  }
+}
+
+footer div p a{
+  text-decoration: none;
+  color: #fff;
+}
+
+footer div p a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+
+/*Footer end*/
+
+
+
+
+
+
+
+
